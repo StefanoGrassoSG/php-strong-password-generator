@@ -44,17 +44,17 @@
 
             <div class="checkboxes">
                 <div>
-                    <input type="checkbox" name="" id="check1">
+                    <input type="checkbox" name="letter" id="check1">
                     <label for="check1">Letters</label>
                 </div>
                 
                 <div>
-                    <input type="checkbox" name="" id="check2">
+                    <input type="checkbox" name="number" id="check2">
                     <label for="check2">Numbers</label>
                 </div>
                
                 <div>
-                    <input type="checkbox" name="" id="check3">
+                    <input type="checkbox" name="symbol" id="check3">
                     <label for="check3">Symbols</label>
                 </div>
             </div>

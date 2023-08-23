@@ -44,7 +44,9 @@ input[value="Back"] {
     cursor: pointer;
 }
 
-
+.result {
+    font-size: 30px;
+}
 
 .radios, .checkboxes, .buttons {
     margin-top: 20px;

@@ -16,8 +16,12 @@
     <body>
         <h1>
             La Password Generata è:
+            <?php
+           echo $_SESSION['test'];
+           echo $_SESSION['test2'];
+             ?>
         </h1>
-        <div>
+        <div class="result"> 
             <?php echo $_SESSION['new_password'] ?>
         </div>
 
