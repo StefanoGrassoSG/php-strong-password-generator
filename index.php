@@ -25,11 +25,44 @@
 
     <div class="formcontainer">
         <form action="" method="GET">
-            <label for="lenght">Lunghezza Password:</label>
-            <input type="number" min="1" max="20" id="lenght" name="input" required value="">
+            <div>
+                <label class="password" for="lenght">Lunghezza Password:</label>
+                <input type="number" min="1" max="20" id="lenght" name="input" required value="">
+            </div>
+           
+            <div class="radios">
+                <span class="allow">
+                    Allow ripetition for one or more characters
+                </span>
+                
+                <input type="radio" id="radio1" name="ripetition" value="yes">
+                <label for="radio1">yes</label>
 
-            <input type="submit" value="Create">
-            <input type="reset" value="Reset">
+                <input type="radio" id="radio2" name="ripetition" value="no">
+                <label for="radio2">no</label>
+            </div>
+
+            <div class="checkboxes">
+                <div>
+                    <input type="checkbox" name="" id="check1">
+                    <label for="check1">Letters</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="" id="check2">
+                    <label for="check2">Numbers</label>
+                </div>
+               
+                <div>
+                    <input type="checkbox" name="" id="check3">
+                    <label for="check3">Symbols</label>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <input type="submit" value="Create">
+                <input type="reset" value="Reset">
+            </div>
         </form>
     </div>
 </body>

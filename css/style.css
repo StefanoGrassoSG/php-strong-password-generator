@@ -26,9 +26,14 @@ body {
     margin-bottom: 20px;
 }
 
-label {
+.password {
     width: 50%;
     display: inline-block;
+}
+
+input[type="number"] {
+    width: 30%;
+    height: 20px;
 }
 
 input[value="Back"] {
@@ -37,4 +42,15 @@ input[value="Back"] {
     padding: 14px;
     color: white;
     cursor: pointer;
+}
+
+
+
+.radios, .checkboxes, .buttons {
+    margin-top: 20px;
+}
+
+.allow {
+    width: 50%;
+    display: inline-block;
 }
