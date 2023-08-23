@@ -18,7 +18,9 @@
     </div>
 
     <div class="resultcontainer">
-        <?php echo isset($stringLenght) ?  $randomPassword : 'No valid parameters entered' ?>
+        <span>
+            No valid parameters entered
+        </span>
     </div>
 
     <div class="formcontainer">

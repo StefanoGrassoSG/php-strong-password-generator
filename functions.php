@@ -1,4 +1,5 @@
 <?php
+    session_start();
     
     $stringLenght = $_GET['input'];
 
@@ -9,3 +10,8 @@
     }
 
     $randomPassword = generateRandomString($stringLenght);
+
+    if(isset($stringLenght)) {
+        $_SESSION['new_password'] = $randomPassword;
+        header('location: ./result.php');
+    }
