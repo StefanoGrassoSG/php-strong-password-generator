@@ -3,7 +3,7 @@
     $stringLenght = $_GET['input'];
 
     function generateRandomString($length) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_-+=<>?';
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_-+=?';
         $randomString = substr(str_shuffle($characters), 0, $length);
         return $randomString;
     }
@@ -27,18 +27,18 @@
         </h1>
     </div>
 
-    <form action="" method="GET">
-        <label for="lenght">Lunghezza Password</label>
-        <input type="number" min="1" max="20" id="lenght" name="input" required value="<?php echo $stringLenght ?>">
+    <div class="resultcontainer">
+        <?php echo isset($stringLenght) ?  $randomPassword : 'No valid parameters entered' ?>
+    </div>
 
-        <input type="submit">Genera
-    </form>
+    <div class="formcontainer">
+        <form action="" method="GET">
+            <label for="lenght">Lunghezza Password:</label>
+            <input type="number" min="1" max="20" id="lenght" name="input" required value="">
 
-    <h2>
-        risultato
-    </h2>
-    <div>
-        <?php echo $randomPassword ?>
+            <input type="submit" value="Create">
+            <input type="reset" value="Reset">
+        </form>
     </div>
 </body>
 </html>
