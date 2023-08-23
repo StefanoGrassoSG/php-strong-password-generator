@@ -24,6 +24,8 @@ body {
     padding: 20px;
     border-radius: 6px;
     margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
 }
 
 .password {

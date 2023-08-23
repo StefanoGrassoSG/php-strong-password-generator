@@ -14,7 +14,7 @@
 </head>
     <body>
         <h1>
-            La Password Generata è:
+            The Generated Password is: <?php echo $_SESSION['test'] ?>
         </h1>
         <div class="result"> 
             <?php  echo $_SESSION['new_password'] ?>

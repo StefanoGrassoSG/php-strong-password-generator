@@ -1,5 +1,5 @@
 <?php
-    include 'functions.php'
+    include 'functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,15 +19,15 @@
 
     <div class="resultcontainer">
         <span>
-            No valid parameters entered
+            Generate your Secure password
         </span>
     </div>
 
     <div class="formcontainer">
         <form action="" method="GET">
             <div>
-                <label class="password" for="lenght">Lunghezza Password:</label>
-                <input type="number" min="1" max="20" id="lenght" name="input" required value="">
+                <label class="password" for="lenght">Password length:</label>
+                <input type="number" min="1" max="25" id="lenght" name="input"  required>
             </div>
            
             <div class="radios">
@@ -35,7 +35,7 @@
                     Allow ripetition for one or more characters
                 </span>
                 
-                <input type="radio" id="radio1" name="ripetition" value="yes">
+                <input type="radio" id="radio1" name="ripetition" value="yes"> 
                 <label for="radio1">yes</label>
 
                 <input type="radio" id="radio2" name="ripetition" value="no">
@@ -58,7 +58,9 @@
                     <label for="check3">Symbols</label>
                 </div>
             </div>
-            
+
+            <?php  echo $_SESSION['text'] ?>
+
             <div class="buttons">
                 <input type="submit" value="Create">
                 <input type="reset" value="Reset">
