@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include 'functions.php'
 
     
@@ -16,13 +15,9 @@
     <body>
         <h1>
             La Password Generata è:
-            <?php
-           echo $_SESSION['test'];
-           echo $_SESSION['test2'];
-             ?>
         </h1>
         <div class="result"> 
-            <?php echo $_SESSION['new_password'] ?>
+            <?php  echo $_SESSION['new_password'] ?>
         </div>
 
         <form action="index.php">
