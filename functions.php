@@ -62,13 +62,4 @@
     if($stringLenght && $randomPassword != false) {
         $_SESSION['new_password'] = $randomPassword;
         header('location: ./result.php');
-        $_GET['input'] = null;
-
-        $vediamo = $_GET['ripetition'];
-        $_SESSION['test'] = $vediamo;
-    }
-
-    if ($randomPassword == false) {
-        $message = "Select at least one of the options: Letters, Numbers or Symbols.";
-        $_SESSION['text'] = $message;
     }

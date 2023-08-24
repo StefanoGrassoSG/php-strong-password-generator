@@ -59,8 +59,6 @@
                 </div>
             </div>
 
-            <?php  echo $_SESSION['text'] ?>
-
             <div class="buttons">
                 <input type="submit" value="Create">
                 <input type="reset" value="Reset">

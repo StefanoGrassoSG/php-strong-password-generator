@@ -14,10 +14,12 @@
 </head>
     <body>
         <h1>
-            The Generated Password is: <?php echo $_SESSION['test'] ?>
+            The Generated Password is:
         </h1>
         <div class="result"> 
-            <?php  echo $_SESSION['new_password'] ?>
+            <?php  echo $_SESSION['new_password'];
+            session_destroy();
+             ?>
         </div>
 
         <form action="index.php">
