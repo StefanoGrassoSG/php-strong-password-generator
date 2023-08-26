@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    if(isset($_GET['input'])) {
-        $stringLenght = $_GET['input'];
+    if(isset($_GET['input']) && is_numeric($_GET['input'])) {
+        $stringLenght = intval($_GET['input']);
     }
     else {
         $stringLenght = null;
@@ -12,9 +12,10 @@
         $notDuplicate = $_GET['ripetition'];
     }
     else {
-        $notDuplicate = null;
+        $notDuplicate = 5;
     }
-    
+
+
     $onlyLetter = isset($_GET['letter']);
     $onlyNumber = isset($_GET['number']);
     $onlySymbol = isset($_GET['symbol']);
@@ -57,9 +58,17 @@
 
 
     $randomPassword = generateRandomString($arrayOfCharacters,  $notDuplicate, $stringLenght,  $onlyLetter, $onlyNumber, $onlySymbol);
-
-   
-    if($stringLenght && $randomPassword != false) {
+    $notSelected = false;
+    $notRadioSelected = false;
+    if($stringLenght && $randomPassword != false && $notSelected == false && $notDuplicate != 5) {
         $_SESSION['new_password'] = $randomPassword;
         header('location: ./result.php');
+    }
+
+    if((isset($_GET['input'])) && ($onlyLetter == false && $onlyNumber == false && $onlySymbol == false)) {
+        $notSelected = true;
+    }
+
+    if((isset($_GET['input'])) && ($notDuplicate == 5)) {
+        $notRadioSelected = true;
     }

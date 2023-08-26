@@ -65,5 +65,22 @@
             </div>
         </form>
     </div>
+
+    
+        <?php
+            if($notSelected == true) {
+                echo 
+                '<div class="warningcontainer">
+                    <span class="warning"> seleziona almeno una checkbox</span>
+                </div>';
+            } 
+
+            if($notRadioSelected == true) {
+                echo 
+                '<div class="warningcontainer">
+                    <span class="warning"> seleziona se vuoi caratteri doppi oppure no</span>
+                </div>';
+            } 
+        ?>
 </body>
 </html>

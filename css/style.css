@@ -28,6 +28,17 @@ body {
     font-size: 20px;
 }
 
+.warningcontainer {
+    max-width: 700px;
+    margin: auto;
+    background-color: coral;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
 .password {
     width: 50%;
     display: inline-block;
