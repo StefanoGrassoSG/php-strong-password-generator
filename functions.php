@@ -12,7 +12,7 @@
         $notDuplicate = $_GET['ripetition'];
     }
     else {
-        $notDuplicate = 5;
+        $notDuplicate = false;
     }
 
 
@@ -60,7 +60,7 @@
     $randomPassword = generateRandomString($arrayOfCharacters,  $notDuplicate, $stringLenght,  $onlyLetter, $onlyNumber, $onlySymbol);
     $notSelected = false;
     $notRadioSelected = false;
-    if($stringLenght && $randomPassword != false && $notSelected == false && $notDuplicate != 5) {
+    if($stringLenght && $randomPassword != false && $notSelected == false && $notDuplicate != false) {
         $_SESSION['new_password'] = $randomPassword;
         header('location: ./result.php');
     }
@@ -69,6 +69,6 @@
         $notSelected = true;
     }
 
-    if((isset($_GET['input'])) && ($notDuplicate == 5)) {
+    if((isset($_GET['input'])) && ($notDuplicate == false)) {
         $notRadioSelected = true;
     }
